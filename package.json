@@ -1,0 +1,32 @@
+{
+  "name": "mywebsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mehulgupta29/Mywebsite.git"
+  },
+  "keywords": [
+    "git",
+    "node",
+    "express",
+    "website",
+    "mehul",
+    "gupta",
+    "mehulgupta",
+    "mongodb",
+    "angularjs",
+    "java",
+    "script"
+  ],
+  "author": "Mehul Gupta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mehulgupta29/Mywebsite/issues"
+  },
+  "homepage": "https://github.com/mehulgupta29/Mywebsite#readme"
+}
