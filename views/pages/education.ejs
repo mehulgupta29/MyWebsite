@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head %>
+</head>
+
+<body>
+    <div class="container">
+        <main>
+            <div class="row">
+                <section class="col-md-12">    
+                    <h1> Education </h1>
+                </section>
+            </div>
+            <div class="row row-even">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <span class="text-code">
+                        var education = Education(
+                        <input type="text" value="Graduate" name="education-level" id="education-level" />) <br />
+                        if (education == "Graduate"){
+                        <% var education = "Graduate" %>
+                            <% include ../partials/college %>
+                        }
+                    </span>
+                </div>
+            </div>
+        </main>
+    </div>
+    <% include ../partials/scripts %>
+</body>
+</html>
