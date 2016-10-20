@@ -1,3 +1,17 @@
+<% 
+var school = {
+        'title' : "Stevens Institute of Technology",
+        'degree' : "Master of Science in Computer Science",
+        'startDate' : "August 2015",
+        'endDate' : "December 2016",
+        'gpa' : 4.0,
+        'gpaOutOf' : 4.0,
+        'image': '/assets/images/stevens.jpeg',
+        'courses' : ["Mobile Applications", "Cyber Security", "Web Analytics" , "Web Programming", "E-Commerce Technologies", "Object Oriented Analysis and Design", "Bloomberg Terminal and Thomson Reuters", "Advanced Database Management Systems", "Business Intelligence and Data Warehousing"]
+    };
+
+var education = "Graduate";
+%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,9 +33,53 @@
                         var education = Education(
                         <input type="text" value="Graduate" name="education-level" id="education-level" />) <br />
                         if (education == "Graduate"){
-                        <% var education = "Graduate" %>
-                            <% include ../partials/college %>
-                        }
+                        <% include ../partials/college %>
+                    </span>
+                </div>
+            </div>
+            <div class="row row-odd">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <span class="text-code">
+                        } else if(education == "Under-Graduate") {
+
+                        <% 
+                            school = {
+                                'title' : "Gujarat Technological University, GCET",
+                                'degree' : "Bachelor of Engineering in Computer Engineering",
+                                'startDate' : "July 2010",
+                                'endDate' : "May 2014",
+                                'gpa' : 9.1,
+                                'gpaOutOf' : 10.0,
+                                'image' : '/assets/images/gcet.jpg',
+                                'courses' : ["Algorithms", "Data Structures", "Operating Systems", "Computer Organization and Architecture", "Distributed Systems", "Cloud Computing", "Digital Image Processing", "Theory of Computation", "Advanced Electronics", "Digital Circuits and Logic", "Compiler Design", "Java Programming", "C / C++ Programming"]
+                            }
+                            education = "Under-Graduate"
+                        %>
+                        <% include ../partials/college %>
+                    }
+                    </span>
+                </div>
+            </div>
+            <div class="row row-even">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <span class="text-code">
+                        } else {
+
+                        <% 
+                            school = {
+                                'title' : "Err... Wrong Input",
+                                'degree' : "",
+                                'startDate' : "",
+                                'endDate' : "",
+                                'gpa' : 0,
+                                'gpaOutOf' : 0,
+                                'image' : '/assets/images/wrong-input-robot.png',
+                                'courses' : []
+                            }
+                            education = "error"
+                        %>
+                        <% include ../partials/college %>
+                    }
                     </span>
                 </div>
             </div>

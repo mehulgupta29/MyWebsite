@@ -1,11 +1,10 @@
 .text-code{
-}
 
+}
 .row-even{
 	background: #e6f9ff;
 	padding: 10px;
 }
-
 .row-odd{
 	background: #e6ffe6;
 }
@@ -13,18 +12,17 @@ input{
 	background: transparent;
 	border: none;
 }
-.college-image{
-	background-image: url(../images/stevens.jpeg);
+.college-container{
+	
 	background-size: 100% 100%; 
 	width: 100%;
 	height: 460px;
 	image-rendering: crisp-edges;
 	vertical-align: middle;
+	margin: 10;
 }
 .college-image-box{
-	margin: 0;
-    padding-left: 0;
-    padding-right: 0;
+    padding-top: 180px;
     outline: 0;
     background: transparent;
     width: 100%;
@@ -33,16 +31,39 @@ input{
     vertical-align: middle;
 }
 span {
-  width: 100%;
-    height: 460px;
-  vertical-align: middle;
-  text-align: center;
-    border: 1px solid red;
-
+	width: 100%;
+	height: 460px;
+	text-align: center;
+}
+.college-image-title{
+	color: white;
+	text-transform: uppercase;
+}
+.college-image-degree{
+	color: white;
+}
+.college-image-period{
+	color: white;
+}
+.college-details{
+}
+.college-details-courses{
+}
+.college-details-gpa{
+}
+.college-details-horz-sep{
+	display: block;
+    height: 1px;
+    border: 0;
+    border-top: 2px solid white;
+    margin: 1em 0;
+    padding: 0;
+}
+.college-details-vert-sep {
+    border-right: 2px solid white;
+}
+.college-container-error{
+}
+.college-container-error-message {
 }
 
-/* for visual purposes */
-#column-content {
-  border: 1px solid red;
-  position: relative;
-}

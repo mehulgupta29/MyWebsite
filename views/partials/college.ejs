@@ -1,51 +1,41 @@
-<% 
-console.log("college = ", education)
-var school = {}
-
-if(education == "Graduate"){
-	school = {
-		'title' : "Stevens Institute of Technology",
-		'degree' : "Master of Science in Computer Science",
-		'startDate' : "August 2015",
-		'endDate' : "December 2016",
-		'gpa' : 4.0,
-		'gpaOutOf' : 4.0,
-		'image': '/assets/images/stevens.jpeg',
-		'courses' : ["Mobile Applications", "Cyber Security", "Web Analytics" , "Web Programming", "E-Commerce Technologies", "Object Oriented Analysis and Design", "Bloomberg Terminal and Thomson Reuters", "Advanced Database Management Systems", "Business Intelligence and Data Warehousing"]
-	}
-}else if(education == "Under-Graduate"){
-	school = {
-		'title' : "Gujarat Technological University, GCET",
-		'degree' : "Bachelor of Engineering in Computer Engineering",
-		'startDate' : "July 2010",
-		'endDate' : "May 2014",
-		'gpa' : 9.1,
-		'gpaOutOf' : 10.0,
-		'image' : '/assets/images/gcet.jpg',
-		'courses' : ["Algorithms", "Data Structures", "Operating Systems", "Computer Organization and Architecture", "Distributed Systems", "Cloud Computing", "Digital Image Processing", "Theory of Computation", "Advanced Electronics", "Digital Circuits and Logic", "Compiler Design", "Java Programming", "C / C++ Programming"]
-	}
-}else {
-	school = { 'image' : '/assets/images/wrong-input-robot.png'}
-	errorMessage = "Err... Wrong Input"
-}
-
-console.log("school = ", school)
-%>
-
 <% include ../partials/head %>
-
+<% if(education != "error"){ %>
 <div class="row">
-	<div class="college-image">
+	<div class="college-container" style="background-image: url(<%= school.image %>);">
 		<div class="college-image-box">
-			<span> <h1> <%= school.title %> </h1> </span>
+			<span> <h1 class="college-image-title"> <%= school.title %> </h1> </span>
+			<span> <h2 class="college-image-degree"> <%= school.degree %> </h2> </span>
+			<span> <p class="college-image-period"> <%= school.startDate %> - <%= school.endDate %> </p> </span>
 		</div>
 	</div>
 </div>
 <div class="row">
-	<div id="column-content">
-
-  <img src="<%= school.image %>">
-  <span><strong>1234</strong>
-    yet another text content that should be centered vertically</span>
+	<div class="college-details">
+		<div class="col-md-9">
+			<div class="college-details-courses">
+				<h3>Courses</h3>
+				<hr class="college-details-horz-sep"/>
+				<p><%= school.courses %></p>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="college-details-gpa">
+				<h3>GPA</h3>
+				<hr class="college-details-horz-sep" />
+				<p><%= school.gpa %> / <%= school.gpaOutOf %></p>
+			</div>
+		</div>
+	</div>
 </div>
+<% }else{ %>
+<div class="row">
+	<div class="college-container-error" >
+		<div class="col-md-6">
+			<span class="college-container-error-message"><p class="college-image-title"><%= school.title %></p></span>
+		</div>
+		<div class="col-md-6">
+			<img src=<%= school.image %>></div>
+		</div>
+	</div>
 </div>
+<% } %>
